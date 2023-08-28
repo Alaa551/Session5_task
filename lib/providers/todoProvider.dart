@@ -25,7 +25,7 @@ class TodoProvider extends ChangeNotifier{
   }
 
   void updateTodoById(int id,TodoModel todoModel){
-    _todos[_todos.indexWhere((element) => element.id==id)]= todoModel;
+    _todos.firstWhere((element) => element.id==id).title=todoModel.title;
     notifyListeners();
   }
   TodoModel getTodoById(int id){

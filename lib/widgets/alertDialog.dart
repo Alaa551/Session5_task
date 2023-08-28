@@ -19,7 +19,6 @@ class MyAlertDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var provider= Provider.of<TodoProvider>(context);
     String title= isAdd?"": todos[index].title;
     final GlobalKey<FormState> formState = GlobalKey<FormState>();
     return AlertDialog(

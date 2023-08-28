@@ -2,10 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import '../models/todoModel.dart';
-import '../providers/todoProvider.dart';
 import 'alertDialog.dart';
 
 class CustomTodoDesign extends StatelessWidget {
@@ -17,7 +15,6 @@ var todoProvider;
 
  @override
   Widget build(BuildContext context) {
-    var todoProvider = Provider.of<TodoProvider>(context);
     return  Dismissible(
       key: ValueKey(todoProvider.todos[index]),
       background: Container(
